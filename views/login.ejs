@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .error {
+            background-color: beige;
+            width: fit-content;
+            margin-top: 4px;
+            padding: 3px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form action="/user/login" method="post">
+
+        <label>Email</label>
+        <input type="text" required name="email" placeholder="Email here">
+        <label>Password</label>
+        <input type="text" required name="password" placeholder="Passwoed here">
+        <button type="submit">Signup</button>
+    </form>
+    <div class="error">
+        <% if (locals.error) { %>
+            <%= error %>
+                <% } %>
+    </div>
+</body>
+
+</html>
